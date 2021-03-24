@@ -27,12 +27,120 @@
 .App-link {
   color: #61dafb;
 }
+.inject-wrapper{
+  box-shadow: 3px 3px 5px 0 rgb(0 0 0 / 25%);
+  float: left;
+  position: relative;
+  transition: all .3s;
+}
+.flex{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.section-header.flex{
+  background: #144c88;  
+  border-top: 4px solid #7dd343;
+  color: #fff;
+  position: relative;
+  justify-content:space-between;
+}
+.dashboard-grid{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  padding: 0px 2rem;
+}
+tr td{
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.chart-label{
+  padding:15px;
+  justify-content: space-around;
+  font-size: 18px;;
+}
+.stats-info{
+  position: relative;
+  width: 45%;
+  height: 275px;
+  overflow: auto;
+  background: #20649b;
+  color:#fff;
+}
+.stats-table{
+  width: 100%;
+  height: 275px;
+  overflow: auto
+}
+table{
+  width: 100%;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.progress-bar{
+  height: 5px;
+  margin: .35em 0 1em;
+  background: #0f3d77;
+  border-radius: 10px;
+}
+.progress-bar:after{
+  content: "";
+    display: block;
+    height: 100%;
+    background: #45b0e6;
+    border-radius: 5px;
+}
+
+.animated-0:after{
+  -webkit-animation: animated-0 2s ease-in-out forwards;
+  animation: animated-0 2s ease-in-out forwards;
+}
+.animated-1:after{
+  -webkit-animation: animated-1 2s ease-in-out forwards;
+  animation: animated-1 2s ease-in-out forwards;
+}
+.animated-2:after{
+  -webkit-animation: animated-2 2s ease-in-out forwards;
+  animation: animated-2 2s ease-in-out forwards;
+}
+.progress-bar{
+  height: 5px;
+margin: .35em 0 1em;
+
+background: #0f3d77;
+border-radius: 10px;
+}
+
+@keyframes animated-0 {
+0% {
+width: 0%
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+      width:50%;
   }
 }
+
+@keyframes animated-1 {
+  0% {
+  width: 0%
+    }
+    100% {
+        width:33%;
+    }
+  }
+
+  @keyframes animated-2 {
+  0% {
+  width: 0%
+    }
+    100% {
+        width:76%;
+    }
+  }
+
+  @media (max-width: 992px) {
+		.dashboard-grid{
+      display:block;
+    }
+	}
